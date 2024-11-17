@@ -22,7 +22,7 @@ provision:
     with:
       # Path to manifest template
       manifestPath: ./appPackage/manifest.json
-      outputZipPath: ./appPackage/build/appPackage.${{TEAMSFX_ENV}}.zip
+      outputZipPath: ./appPackage/build/RandomUser.zip
       outputFolder: ./appPackage/build
   # Validate app package using validation rules
   - uses: teamsApp/validateAppPackage
