@@ -1,0 +1,82 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.1/schema.json",
+    "schema_version": "v2.1",
+    "name_for_human": "Random User",
+    "description_for_human": "A free, open-source API for generating random user data.",
+    "namespace": "randomuser",
+    "functions": [
+        {
+            "name": "get",
+            "description": "Retrieve randomly generated user data. Required Values: gender (male, female), nat (e.g., us, gb). Optional Values: results (integer, default 1).",
+            "capabilities": {
+                "response_semantics": {
+                    "data_path": "$.results",
+                    "properties": {
+                        "title": "$.name.title",
+                        "subtitle": "$.gender"
+                    },
+                    "static_template": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.5",
+                        "body": [
+                            {
+                                "type": "Container",
+                                "$data": "${$root}",
+                                "items": [
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "gender: ${if(gender, gender, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "name.title: ${if(name.title, name.title, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "name.first: ${if(name.first, name.first, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "name.last: ${if(name.last, name.last, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "location.street.number: ${if(location.street.number, location.street.number, 'N/A')}",
+                                        "wrap": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "OpenApi",
+            "auth": {
+                "type": "None"
+            },
+            "spec": {
+                "url": "apiSpecificationFile/openapi.yaml"
+            },
+            "run_for_functions": [
+                "get"
+            ]
+        }
+    ],
+    "capabilities": {
+        "localization": {},
+        "conversation_starters": [
+            {
+                "text": "Get Random User Data"
+            }
+        ]
+    }
+}

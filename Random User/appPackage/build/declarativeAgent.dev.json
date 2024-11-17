@@ -1,0 +1,13 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+    "version": "v1.0",
+    "name": "Random User",
+    "description": "Declarative agent created with Teams Toolkit",
+    "instructions": "Before calling randomuser_get, make sure that you have the required values provided by the user. Required Values: gender (male, female), nat (e.g., us, gb). Optional Values: results (integer, default 1). If the user has not provided the require values, ask them to provide them. ",
+    "actions": [
+        {
+            "id": "action_1",
+            "file": "ai-plugin.json"
+        }
+    ]
+}
