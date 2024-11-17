@@ -1,0 +1,140 @@
+openapi: 3.0.0
+info:
+  title: Random User Generator API
+  description: A free, open-source API for generating random user data.
+  version: 1.0.0
+servers:
+  - url: https://randomuser.me/api
+paths:
+  /:
+    get:
+      summary: Get Random User Data
+      description: Retrieve randomly generated user data.
+      parameters:
+        - name: results
+          in: query
+          description: Number of results to return.
+          required: false
+          schema:
+            type: integer
+            default: 1
+        - name: gender
+          in: query
+          description: Specify gender of the results.
+          required: true
+          schema:
+            type: string
+            enum:
+              - male
+              - female
+        - name: nat
+          in: query
+          description: Limit results to specific nationalities.
+          required: true
+          schema:
+            type: string
+            example: us,gb
+      responses:
+        "200":
+          description: A list of randomly generated users.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        gender:
+                          type: string
+                        name:
+                          type: object
+                          properties:
+                            title:
+                              type: string
+                            first:
+                              type: string
+                            last:
+                              type: string
+                        location:
+                          type: object
+                          properties:
+                            street:
+                              type: object
+                              properties:
+                                number:
+                                  type: integer
+                                name:
+                                  type: string
+                            city:
+                              type: string
+                            state:
+                              type: string
+                            country:
+                              type: string
+                            postcode:
+                              type: string
+                        email:
+                          type: string
+                        login:
+                          type: object
+                          properties:
+                            uuid:
+                              type: string
+                            username:
+                              type: string
+                            password:
+                              type: string
+                            salt:
+                              type: string
+                            md5:
+                              type: string
+                            sha1:
+                              type: string
+                            sha256:
+                              type: string
+                        dob:
+                          type: object
+                          properties:
+                            date:
+                              type: string
+                              format: date-time
+                            age:
+                              type: integer
+                        registered:
+                          type: object
+                          properties:
+                            date:
+                              type: string
+                              format: date-time
+                            age:
+                              type: integer
+                        phone:
+                          type: string
+                        cell:
+                          type: string
+                        id:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            value:
+                              type: string
+                        picture:
+                          type: object
+                          properties:
+                            large:
+                              type: string
+                            medium:
+                              type: string
+                            thumbnail:
+                              type: string
+                        nat:
+                          type: string
+        "400":
+          description: Invalid request parameters.
+        "500":
+          description: Internal server error.
+      operationId: get
