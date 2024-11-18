@@ -33,7 +33,29 @@ paths:
           required: true
           schema:
             type: string
-            example: us,gb
+            enum:
+              - AU
+              - BR
+              - CA
+              - CH
+              - DE
+              - DK
+              - ES
+              - FI
+              - FR
+              - GB
+              - IE
+              - IN
+              - IR
+              - MX
+              - NL
+              - NO
+              - NZ
+              - RS
+              - TR
+              - UA
+              - US
+            example: AU, BR, CA, DE, US
       responses:
         "200":
           description: A list of randomly generated users.
