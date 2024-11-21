@@ -29,7 +29,7 @@ In the Teams Toolkit, select **Create New App**, select Agent, Declarative Agent
 The Teams Toolkit will build the files needed for a declaritive agent, the files you want to edit to add the functionality are in the /[appPackage](https://github.com/alexheat/Random-User-Declarative-Agent-/tree/main/Random%20User/appPackage) directory.
 
 ![image](https://github.com/user-attachments/assets/c4aa467d-a1e9-4925-b401-e886baf230ae)
-The only 2 files you probably to modify are instructions.txt (where you put the LLM instructions for what the agent should do) and declarativeAgent.json (where you can add the conversation starters) and add additional capabilites like Web or SharePoint search. 
+The only 2 files you probably need to modify are instructions.txt (where you put the LLM instructions for what the agent should do) and declarativeAgent.json (where you can add the conversation starters) and add additional capabilites like Web or SharePoint search. 
 
 When you're ready, select Provision to validate the agent, package it into a .[zip](https://github.com/alexheat/Random-User-Declarative-Agent-/blob/main/Random%20User/appPackage/build/RandomUser.zip) file, and load it into Copilot so you can use it. Open Copilot, find Random User in the list of agents on the right side bar. When you ask it to generate list of users, the agent will submit a request to the Ramdom User API, get the results, and then display them per the formatting instructions that you have provided. 
 
