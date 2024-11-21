@@ -14,8 +14,8 @@
         "outline": "binary_face_styled.png"
     },
     "name": {
-        "short": "Random User${{APP_NAME_SUFFIX}}",
-        "full": "Full name for Random User"
+        "short": "Random User Agent",
+        "full": "Generate Random Users"
     },
     "description": {
         "short": "Short description for Random User",
