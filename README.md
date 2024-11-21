@@ -1,5 +1,9 @@
 # Random-User-Declarative-Agent- (Unofficial Sample App)
-Sample Declarative Agent for Microsoft 365 Copilot using the public random user generator API at https://randomuser.me/. This tutorial uses the Teams Toolkit and Visual Studio Code to build the sample agent, if you have not used the Teams Toolkit before I recomend completing this official tutorial first [Create declarative agents using Teams Toolkit](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk).
+Sample Declarative Agent for Microsoft 365 Copilot using the public random user generator API at https://randomuser.me/. 
+
+<img width="660" alt="image" src="https://github.com/user-attachments/assets/bca09f5a-851d-4b86-b2d0-49d739816c4a">
+
+This tutorial uses the Teams Toolkit and Visual Studio Code to build the sample agent, if you have not used the Teams Toolkit before I recomend completing this official tutorial first [Create declarative agents using Teams Toolkit](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk).
 
 ## Planning the Agent
 I am a member of the Microsoft Copilot team working on the Declarative Agent platform and I created this sample app to explore and test building an agent that retrieves data from external APIs (also known as actions). 
@@ -27,6 +31,9 @@ The Teams Toolkit will build the files needed for a declaritive agent, the files
 ![image](https://github.com/user-attachments/assets/c4aa467d-a1e9-4925-b401-e886baf230ae)
 The only 2 files you probably to modify are instructions.txt (where you put the LLM instructions for what the agent should do) and declarativeAgent.json (where you can add the conversation starters) and add additional capabilites like Web or SharePoint search. 
 
-When you're ready, select Provision to validate the agent, package it into a .[zip](https://github.com/alexheat/Random-User-Declarative-Agent-/blob/main/Random%20User/appPackage/build/RandomUser.zip) file, and load it into Copilot so you can use it. 
+When you're ready, select Provision to validate the agent, package it into a .[zip](https://github.com/alexheat/Random-User-Declarative-Agent-/blob/main/Random%20User/appPackage/build/RandomUser.zip) file, and load it into Copilot so you can use it. Open Copilot, find Random User in the list of agents on the right side bar. When you ask it to generate list of users, the agent will submit a request to the Ramdom User API, get the results, and then display them per the formatting instructions that you have provided. 
+
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/78c63941-b18e-41d6-9118-02193a4bbe1d">
+
 
 
