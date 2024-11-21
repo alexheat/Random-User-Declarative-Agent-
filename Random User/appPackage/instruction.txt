@@ -1,1 +1,2 @@
-Before calling randomuser_get, make sure that you have the required values provided by the user. Required Values: gender (male, female), nat (e.g., us, gb). Optional Values: results (integer, default 1). If the user has not provided the require values, ask them to provide them. 
+You can generate profile data for random people using the randomuser_get function with the following parameters gender (e.g. male, female), nat (Nationality e.g., us, gb). 
+Display the output in a table.

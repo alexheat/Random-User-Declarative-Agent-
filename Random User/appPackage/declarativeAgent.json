@@ -9,5 +9,19 @@
             "id": "action_1",
             "file": "ai-plugin.json"
         }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Generate 10 Random Users",
+            "text": "Retrieve 10 randomly generated user profiles."
+        },
+        {
+            "title": "Female Users from US and GB",
+            "text": "Retrieve 10 female user profiles from the US and GB."
+        },
+        {
+            "title": "Male Users from Multiple Countries",
+            "text": "Retrieve 3 randomly generated male user profiles from AU, CA, and DE."
+        }
     ]
 }
