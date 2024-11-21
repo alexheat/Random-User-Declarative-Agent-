@@ -23,17 +23,17 @@ Can you create an open API specification from this web page https://randomuser.m
 Next ask Copilot to save it as a YAML file
 ![image](https://github.com/user-attachments/assets/74d85d5d-83db-4c15-b442-b4e91775cd4a)
 
-## Build the Declaritive Agent Using the Teams Toolkit and Visual Studio Code
-In the Teams Toolkit, select **Create New App**, select Agent, Declarative Agent, Add Pluging, and then select “Start with an OpenAPI Description Document”, and browse to to the YAML file. 
+## Build the Declarative Agent Using the Teams Toolkit and Visual Studio Code
+In the Teams Toolkit, select **Create New App**, select Agent, Declarative Agent, Add Plugin, and then select “Start with an OpenAPI Description Document”, and browse to the YAML file. 
 ![alt text](image.png)
-The Teams Toolkit will build the files needed for a declaritive agent, the files you want to edit to add the functionality are in the /[appPackage](https://github.com/alexheat/Random-User-Declarative-Agent-/tree/main/Random%20User/appPackage) directory.
+The Teams Toolkit will build the files needed for a declarative agent. The files you want to edit to add the functionality are in the /[appPackage](https://github.com/alexheat/Random-User-Declarative-Agent-/tree/main/Random%20User/appPackage).
 
 ![image](https://github.com/user-attachments/assets/c4aa467d-a1e9-4925-b401-e886baf230ae)
-The only 2 files you probably need to modify are instructions.txt (where you put the LLM instructions for what the agent should do) and declarativeAgent.json (where you can add the conversation starters) and add additional capabilites like Web or SharePoint search. 
 
-When you're ready, select Provision to validate the agent, package it into a .[zip](https://github.com/alexheat/Random-User-Declarative-Agent-/blob/main/Random%20User/appPackage/build/RandomUser.zip) file, and load it into Copilot so you can use it. Open Copilot, find Random User in the list of agents on the right side bar. When you ask it to generate list of users, the agent will submit a request to the Ramdom User API, get the results, and then display them per the formatting instructions that you have provided. 
+The only 2 files you probably need to modify are instructions.txt (where you put the LLM instructions for what the agent should do) and declarativeAgent.json (where you can add the conversation starters) and other configurations.
+
+When you're ready, select Provision to validate the agent, package it into a [zip](https://github.com/alexheat/Random-User-Declarative-Agent-/blob/main/Random%20User/appPackage/build/RandomUser.zip) file, and deploy it.
 
 <img width="722" alt="image" src="https://github.com/user-attachments/assets/78c63941-b18e-41d6-9118-02193a4bbe1d">
-
 
 
