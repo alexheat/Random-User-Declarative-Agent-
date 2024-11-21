@@ -10,8 +10,8 @@
         "termsOfUseUrl": "https://www.example.com/termofuse"
     },
     "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
+        "color": "binary_face_image_512px.png",
+        "outline": "binary_face_styled.png"
     },
     "name": {
         "short": "Random User${{APP_NAME_SUFFIX}}",
