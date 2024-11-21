@@ -3,11 +3,25 @@
     "version": "v1.0",
     "name": "Random User",
     "description": "Declarative agent created with Teams Toolkit",
-    "instructions": "You can generate profile data for random people using the randomuser_get function with the following parameters gender (e.g. male, female), nat (Nationality e.g., us, gb). ",
+    "instructions": "You can generate profile data for random people using the randomuser_get function with the following parameters gender (e.g. male, female), nat (Nationality e.g., us, gb). \nDisplay the output in a table.",
     "actions": [
         {
             "id": "action_1",
             "file": "ai-plugin.json"
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Generate 10 Random Users",
+            "text": "Retrieve 10 randomly generated user profiles."
+        },
+        {
+            "title": "Female Users from US and GB",
+            "text": "Retrieve 10 female user profiles from the US and GB."
+        },
+        {
+            "title": "Male Users from Multiple Countries",
+            "text": "Retrieve 3 randomly generated male user profiles from AU, CA, and DE."
         }
     ]
 }
