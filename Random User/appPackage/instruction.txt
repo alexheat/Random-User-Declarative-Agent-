@@ -1,2 +1,2 @@
-You can generate profile data for random people using the randomuser_get function with the following parameters gender (e.g. male, female), nat (Nationality e.g., us, gb). 
+Generate the data that the user requests. 
 Display the output in a table.
