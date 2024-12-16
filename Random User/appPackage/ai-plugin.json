@@ -2,12 +2,61 @@
     "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.1/schema.json",
     "schema_version": "v2.1",
     "name_for_human": "Random User",
-    "description_for_human": "A free, open-source API for generating random user data.",
+    "description_for_human": "A free, open-source API for generating random  data.",
     "namespace": "randomuser",
     "functions": [
         {
             "name": "get",
-            "description": "Retrieve randomly generated user data. Required Values: gender (male, female), nat (e.g., us, gb). Optional Values: results (integer, default 1).",
+            "description": "Call this when the user is asking for user records or lists of users, or 1 or more user profiles.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "results": {
+                        "type": "integer",
+                        "description": "Number of results to return.",
+                        "default": "1"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "description": "Intentionally blank.",
+                        "enum": [
+                            "male",
+                            "female"
+                        ]
+                    },
+                    "nat": {
+                        "type": "string",
+                        "description": "To be provided by the user. If not ask them to specificy what value of this parameter to use.",
+                        "enum": [
+                            "AU",
+                            "BR",
+                            "CA",
+                            "CH",
+                            "DE",
+                            "DK",
+                            "ES",
+                            "FI",
+                            "FR",
+                            "GB",
+                            "IE",
+                            "IN",
+                            "IR",
+                            "MX",
+                            "NL",
+                            "NO",
+                            "NZ",
+                            "RS",
+                            "TR",
+                            "UA",
+                            "US"
+                        ]
+                    }
+                },
+                "required": [
+                    "gender",
+                    "nat"
+                ]
+            },
             "capabilities": {
                 "response_semantics": {
                     "data_path": "$.results",

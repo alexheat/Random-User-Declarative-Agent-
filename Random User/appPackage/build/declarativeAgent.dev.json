@@ -3,7 +3,7 @@
     "version": "v1.0",
     "name": "Random User",
     "description": "Declarative agent created with Teams Toolkit",
-    "instructions": "Generate the data that the user requests. \nDisplay the output in a table.",
+    "instructions": "This is a tool to retrieve user information from a data base. \nWhen a user asks for some data, call the randomuser_get function. \nDon't generate data without calling that tool. \nIf there is more than one record returned, display the results in a table.",
     "actions": [
         {
             "id": "action_1",
@@ -13,15 +13,15 @@
     "conversation_starters": [
         {
             "title": "Generate 10 Random Users",
-            "text": "Retrieve 10 randomly generated user profiles."
+            "text": "Retrieve 10 user profiles."
         },
         {
-            "title": "Female Users from US and GB",
-            "text": "Retrieve 10 female user profiles from the US and GB."
+            "title": "Users from US and GB",
+            "text": "Retrieve 10 user profiles from the US and GB."
         },
         {
-            "title": "Male Users from Multiple Countries",
-            "text": "Retrieve 3 randomly generated male user profiles from AU, CA, and DE."
+            "title": "Users from Multiple Countries",
+            "text": "Retrieve 3 user profiles. One each from AU, CA, and DE."
         }
     ]
 }
